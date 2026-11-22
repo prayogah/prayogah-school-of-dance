@@ -116,3 +116,41 @@
 .hasta-card .hasta-illustration{display:block;width:100%;height:140px;object-fit:contain;margin:0 auto 8px;mix-blend-mode:normal}
 .hasta-card strong{font-size:13px;line-height:1.4}
 @media(max-width:760px){.hasta-card .hasta-illustration{height:120px}.hasta-card{min-height:198px}}
+
+/* v18: keep the 24 Samyutha cards in a responsive grid without horizontal overflow */
+.hasta-grid{width:100%;max-width:100%;grid-template-columns:repeat(6,minmax(0,1fr));box-sizing:border-box}
+.hasta-card{min-width:0;overflow:hidden;box-sizing:border-box}
+.hasta-card .hasta-illustration{max-width:100%;object-fit:contain}
+@media(max-width:1000px){.hasta-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.hasta-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:450px){.hasta-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* v19: balanced hero typography and larger, softly blended Nataraja */
+.hero.hero-reimagined{min-height:720px;background:#210c17}
+.hero-reimagined::before{
+  inset:0 38% 0 0;
+  background-image:url('assets/nataraja.webp');
+  background-size:auto 118%;
+  background-position:48% 50%;
+  background-repeat:no-repeat;
+  opacity:.36;
+  -webkit-mask-image:radial-gradient(ellipse 46% 64% at 49% 52%,#000 25%,transparent 100%);
+  mask-image:radial-gradient(ellipse 46% 64% at 49% 52%,#000 25%,transparent 100%);
+}
+.hero-reimagined .hero-content{width:min(1280px,88%);min-height:720px;padding:78px 0;justify-content:center}
+.hero-reimagined .hero-content h1{width:55%;margin:20px 0 24px;line-height:1}
+.hero-reimagined .school-name{font-size:clamp(76px,7.3vw,126px);letter-spacing:-.045em;line-height:.95}
+.hero-reimagined .school-subname{font-family:'DM Sans',Arial,sans-serif;font-weight:600;font-size:clamp(19px,2.15vw,32px);letter-spacing:.17em;margin-top:20px;line-height:1.25}
+.hero-reimagined .hero-tagline{font-size:clamp(27px,2.2vw,36px);max-width:55%;margin:0 0 18px;line-height:1.25}
+.hero-reimagined .hero-description{max-width:51%;font-size:15px;line-height:1.75}
+.hero-reimagined .hero-visuals{width:38%}
+@media(max-width:1100px){.hero-reimagined .school-name{font-size:clamp(62px,7vw,95px)}.hero-reimagined .school-subname{font-size:clamp(17px,2vw,25px)}}
+@media(max-width:760px){
+ .hero.hero-reimagined{min-height:720px}
+ .hero-reimagined::before{inset:0;background-size:auto 90%;background-position:46% 42%;opacity:.26;-webkit-mask-image:radial-gradient(ellipse 70% 55% at 50% 45%,#000 18%,transparent 100%);mask-image:radial-gradient(ellipse 70% 55% at 50% 45%,#000 18%,transparent 100%)}
+ .hero-reimagined .hero-content{min-height:720px;width:90%;padding:95px 0 65px}
+ .hero-reimagined .hero-content h1{width:100%}
+ .hero-reimagined .school-name{font-size:clamp(56px,11vw,84px);white-space:normal}
+ .hero-reimagined .school-subname{font-size:clamp(17px,3.7vw,25px);white-space:normal;letter-spacing:.11em}
+ .hero-reimagined .hero-tagline,.hero-reimagined .hero-description{max-width:100%}
+}
