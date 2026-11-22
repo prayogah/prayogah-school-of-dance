@@ -154,3 +154,20 @@
  .hero-reimagined .school-subname{font-size:clamp(17px,3.7vw,25px);white-space:normal;letter-spacing:.11em}
  .hero-reimagined .hero-tagline,.hero-reimagined .hero-description{max-width:100%}
 }
+
+/* Version 20: clean two-column hero and enlarged transparent Nataraja silhouette */
+.hero.hero-reimagined{min-height:680px;background:#210c17;isolation:isolate}
+.hero-reimagined::before{content:"";position:absolute;z-index:0;inset:0 38% 0 0;background-image:url('assets/nataraja-cutout.png');background-size:auto 110%;background-position:center 52%;background-repeat:no-repeat;opacity:.31;mask-image:none;-webkit-mask-image:none;pointer-events:none}
+.hero-reimagined .hero-visuals{width:38%;right:0;left:auto;z-index:1}
+.hero-reimagined .hero-shade{z-index:1;pointer-events:none;background:linear-gradient(90deg,transparent 0%,transparent 58%,#210c17 61%,transparent 65%)}
+.hero-reimagined .hero-content{z-index:2;width:100%;max-width:none;margin:0;padding:74px 0 74px clamp(28px,8vw,155px);min-height:680px;align-items:flex-start;justify-content:center}
+.hero-reimagined .hero-content>*{max-width:min(52vw,770px)}
+.hero-reimagined .hero-content h1{width:auto;max-width:58%;margin:14px 0 23px}
+.hero-reimagined .school-name{font-size:clamp(70px,7.1vw,122px);line-height:.98;letter-spacing:-.045em;white-space:nowrap}
+.hero-reimagined .school-subname{font-size:clamp(19px,2.25vw,34px);letter-spacing:.16em;white-space:nowrap;margin-top:15px}
+.hero-reimagined .hero-ornament{margin:12px 0 0}
+.hero-reimagined .hero-tagline{font-size:clamp(24px,2.2vw,37px);max-width:56%;margin-bottom:15px}
+.hero-reimagined .hero-description{font-size:15px;max-width:50%;line-height:1.7}
+.hero-reimagined .hero-actions{margin-top:23px}
+@media(max-width:900px){.hero-reimagined .hero-content{padding-left:5vw}.hero-reimagined .school-name{font-size:clamp(56px,8vw,90px)}.hero-reimagined .school-subname{font-size:clamp(16px,2.4vw,24px)}}
+@media(max-width:760px){.hero.hero-reimagined{min-height:700px}.hero-reimagined::before{inset:0;background-size:auto 82%;background-position:center 40%;opacity:.19}.hero-reimagined .hero-visuals{width:100%;opacity:.28}.hero-reimagined .hero-shade{background:linear-gradient(90deg,#210c17bd,#210c1799)}.hero-reimagined .hero-content{width:100%;min-height:700px;padding:90px 6vw 60px}.hero-reimagined .hero-content>*{max-width:100%}.hero-reimagined .hero-content h1{max-width:100%}.hero-reimagined .school-name{font-size:clamp(58px,12vw,88px);white-space:normal}.hero-reimagined .school-subname{font-size:clamp(16px,4vw,25px);white-space:normal}.hero-reimagined .hero-tagline,.hero-reimagined .hero-description{max-width:100%}}
