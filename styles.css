@@ -70,3 +70,17 @@
 .journey-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
 @media(max-width:850px){.journey-collage{grid-template-rows:220px 180px}}
 @media(max-width:480px){.journey-collage{grid-template-rows:185px 145px;gap:7px}}
+
+/* Gallery captions hidden for now; remove these rules to show them in future. */
+.gallery-grid figcaption, .photo-preview-caption { display: none !important; }
+
+/* v14: Nataraja artwork behind the title, guru portrait on the right. */
+.hero-reimagined{background:#1c0c13}
+.hero-reimagined .hero-visuals{display:block;inset:0 0 0 auto;width:38%;opacity:1;z-index:0;overflow:hidden}
+.hero-reimagined .hero-main-image{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.hero-reimagined::before{content:"";position:absolute;inset:0 38% 0 0;background-image:linear-gradient(90deg,rgba(25,7,14,.60),rgba(25,7,14,.72)),url("assets/nataraja.webp");background-size:cover,contain;background-repeat:no-repeat;background-position:center,center;z-index:0}
+.hero-reimagined .hero-shade{z-index:0;background:linear-gradient(90deg,rgba(25,7,14,.18) 0%,rgba(25,7,14,.10) 57%,rgba(25,7,14,.07) 62%,transparent 80%)}
+.hero-reimagined .hero-content{position:relative;z-index:1}
+.hero-reimagined .hero-content h1{max-width:65%}
+.hero-reimagined .hero-tagline,.hero-reimagined .hero-description{max-width:58%}
+@media(max-width:760px){.hero-reimagined .hero-visuals{width:45%;opacity:.55}.hero-reimagined::before{inset:0;background-size:cover,90% auto;background-position:center,center 35%;opacity:.65}.hero-reimagined .hero-shade{background:linear-gradient(90deg,rgba(25,7,14,.92),rgba(25,7,14,.67) 75%,rgba(25,7,14,.5))}.hero-reimagined .hero-content h1,.hero-reimagined .hero-tagline,.hero-reimagined .hero-description{max-width:100%}.hero-reimagined .hero-main-image{object-position:55% center}}
