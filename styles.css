@@ -110,3 +110,9 @@
 @media(max-width:1100px){.hero-reimagined .school-name{font-size:clamp(66px,8vw,100px)}.hero-reimagined .school-subname{font-size:clamp(18px,2.4vw,28px)}.hero-reimagined .hero-visuals{width:36%}.hero-reimagined::before{right:36%}}
 @media(max-width:760px){.hero.hero-reimagined{min-height:720px}.hero-reimagined .hero-visuals{width:100%;opacity:.32}.hero-reimagined .hero-main-image{object-fit:contain;object-position:right bottom}.hero-reimagined::before{inset:0;background-size:100% 100%,auto 68%;background-position:center,center 38%;opacity:.8}.hero-reimagined .hero-shade{background:linear-gradient(90deg,#1d0a14d9,#1d0a1499)}.hero-reimagined .hero-content{width:90%;min-height:720px;padding:100px 0 70px}.hero-reimagined .hero-content h1{width:100%;max-width:100%;margin:18px 0 24px}.hero-reimagined .school-name{font-size:clamp(60px,12vw,95px);white-space:normal}.hero-reimagined .school-subname{font-size:clamp(17px,4vw,27px);white-space:normal;letter-spacing:.10em;margin-top:17px}.hero-reimagined .hero-tagline,.hero-reimagined .hero-description{max-width:100%}}
 .hasta-card .hasta-illustration{height:110px;width:100%;object-fit:contain}
+
+/* Version 17: full gesture illustrations, without duplicate chart labels */
+.hasta-card{min-height:220px;justify-content:flex-start;padding:12px 10px 15px}
+.hasta-card .hasta-illustration{display:block;width:100%;height:140px;object-fit:contain;margin:0 auto 8px;mix-blend-mode:normal}
+.hasta-card strong{font-size:13px;line-height:1.4}
+@media(max-width:760px){.hasta-card .hasta-illustration{height:120px}.hasta-card{min-height:198px}}
